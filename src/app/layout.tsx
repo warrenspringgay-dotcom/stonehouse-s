@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     siteName: "Stonehouse’s Fish & Chips",
     images: [
       {
-        url: "/images/stonehouses-shop-front.jpg",
+        url: "/images/stonehouses-fish-and-chips-box.png",
         width: 1200,
         height: 630,
-        alt: "Stonehouse’s Fish and Chips shop front in Lingdale",
+        alt: "Stonehouse’s fish and chips in Lingdale",
       },
     ],
     locale: "en_GB",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Stonehouse’s Fish & Chips | Lingdale",
     description:
       "Local village fish and chips in Lingdale, family run since 1999.",
-    images: ["/images/stonehouses-shop-front.jpg"],
+    images: ["/images/stonehouses-fish-and-chips-box.png"],
   },
   alternates: {
     canonical: siteUrl,
