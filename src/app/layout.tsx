@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://www.stonehousesfishandchips.co.uk";
+const siteUrl = "https://www.stonehouseschipshop.co.uk";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     siteName: "Stonehouse’s Fish & Chips",
     images: [
       {
-        url: "/images/stonehouses-fish-and-chips-box.png",
+        url: "/images/stonehouses-fish-and-chips-branded.png",
         width: 1200,
         height: 630,
-        alt: "Stonehouse’s fish and chips in Lingdale",
+        alt: "Stonehouse’s fish and chips",
       },
     ],
     locale: "en_GB",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Stonehouse’s Fish & Chips | Lingdale",
     description:
       "Local village fish and chips in Lingdale, family run since 1999.",
-    images: ["/images/stonehouses-fish-and-chips-box.png"],
+    images: ["/images/stonehouses-fish-and-chips-branded.png"],
   },
   alternates: {
     canonical: siteUrl,

@@ -14,6 +14,9 @@ export default function SiteHeader() {
           <Link className="hover:text-white" href="#menu">
             Menu
           </Link>
+          <Link className="hover:text-white" href="#gallery">
+            Food
+          </Link>
           <Link className="hover:text-white" href="#visit">
             Visit
           </Link>
@@ -38,13 +41,13 @@ export default function SiteHeader() {
           <Link href="#menu" className="rounded-xl border border-white/10 bg-white/[0.04] px-2 py-2 hover:text-white">
             Menu
           </Link>
+          <Link href="#gallery" className="rounded-xl border border-white/10 bg-white/[0.04] px-2 py-2 hover:text-white">
+            Food
+          </Link>
           <Link href="#visit" className="rounded-xl border border-white/10 bg-white/[0.04] px-2 py-2 hover:text-white">
             Visit
           </Link>
-          <Link href="#contact" className="rounded-xl border border-[#b89757]/40 bg-[#b89757]/10 px-2 py-2 text-[#ead39a] hover:text-white">
-            Contact
-          </Link>
-          <a href={PHONE_HREF} className="rounded-xl border border-white/10 bg-white/[0.04] px-2 py-2 hover:text-white">
+          <a href={PHONE_HREF} className="rounded-xl border border-[#b89757]/40 bg-[#b89757]/10 px-2 py-2 text-[#ead39a] hover:text-white">
             Call
           </a>
         </div>
