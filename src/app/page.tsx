@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Clock,
   ExternalLink,
@@ -230,6 +231,12 @@ function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/fish-and-chips-lingdale"
+              className="inline-flex items-center gap-2 rounded-2xl border border-white/20 px-6 py-3 font-black text-white transition hover:bg-white/10"
+            >
+              Fish & Chips Lingdale
+            </Link>
             <a
               href="#menu"
               className="inline-flex items-center gap-2 rounded-2xl bg-[#b89757] px-6 py-3 font-black text-black shadow-lg shadow-[#b89757]/20 transition hover:bg-[#d4b56b]"
