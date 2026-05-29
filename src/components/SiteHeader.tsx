@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const FACEBOOK_URL = "https://www.facebook.com/";
+const PHONE_HREF = "tel:+441287658777";
 
 export default function SiteHeader() {
   return (
@@ -25,12 +25,12 @@ export default function SiteHeader() {
           </Link>
         </nav>
 
-        <Link
-          href="#contact"
+        <a
+          href={PHONE_HREF}
           className="shrink-0 rounded-xl bg-[#b89757] px-4 py-2 text-sm font-black text-black hover:bg-[#d4b56b]"
         >
-          Order / Enquire
-        </Link>
+          Call Now
+        </a>
       </div>
 
       <nav className="border-t border-white/10 px-3 py-2 md:hidden">
@@ -44,9 +44,9 @@ export default function SiteHeader() {
           <Link href="#contact" className="rounded-xl border border-[#b89757]/40 bg-[#b89757]/10 px-2 py-2 text-[#ead39a] hover:text-white">
             Contact
           </Link>
-          <Link href="#reviews" className="rounded-xl border border-white/10 bg-white/[0.04] px-2 py-2 hover:text-white">
-            Reviews
-          </Link>
+          <a href={PHONE_HREF} className="rounded-xl border border-white/10 bg-white/[0.04] px-2 py-2 hover:text-white">
+            Call
+          </a>
         </div>
       </nav>
     </header>
