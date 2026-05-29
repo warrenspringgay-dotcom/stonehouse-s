@@ -19,8 +19,8 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 const BUSINESS_NAME = "Stonehouse’s Fish & Chips";
-const SITE_URL = "https://www.stonehouseschipshop.co.uk";
-const BUSINESS_EMAIL = "hello@stonehouseschipshop.co.uk";
+const SITE_URL = "https://www.stonehousesfishandchips.co.uk";
+const BUSINESS_EMAIL = "hello@stonehousesfishandchips.co.uk";
 const PHONE_DISPLAY = "01287 658777";
 const PHONE_HREF = "tel:+441287658777";
 const FACEBOOK_URL = "https://www.facebook.com/";
@@ -443,15 +443,25 @@ function VisitSection() {
             </p>
           </div>
 
-          <a
-            href={GOOGLE_MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-[#b89757] px-6 py-3 font-black text-black transition hover:bg-[#d4b56b]"
-          >
-            Open in Google Maps
-            <ExternalLink className="h-4 w-4" />
-          </a>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-2xl bg-[#b89757] px-6 py-3 font-black text-black transition hover:bg-[#d4b56b]"
+            >
+              Open in Google Maps
+              <ExternalLink className="h-4 w-4" />
+            </a>
+
+            <a
+              href={PHONE_HREF}
+              className="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-6 py-3 font-black text-white transition hover:bg-white/10"
+            >
+              <Phone className="h-4 w-4" />
+              Call the Shop
+            </a>
+          </div>
         </div>
 
         <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-2xl">
@@ -465,11 +475,24 @@ function VisitSection() {
         </div>
       </div>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-2xl">
-          <Clock className="mb-4 h-8 w-8 text-[#d4b56b]" />
-          <h2 className="font-serif text-4xl font-black">Opening Hours</h2>
-          <div className="mt-6 space-y-3 text-zinc-300">
+      <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-2xl">
+        <Clock className="mb-4 h-8 w-8 text-[#d4b56b]" />
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-[#d4b56b]">
+              Opening Times
+            </p>
+            <h2 className="mt-3 font-serif text-4xl font-black">
+              Open for lunch and evening service
+            </h2>
+            <p className="mt-4 leading-7 text-zinc-300">
+              Stonehouse’s opens for traditional lunch and teatime chip-shop
+              service through the week, with extended weekend hours on Friday and
+              Saturday. Closed Sunday and Monday.
+            </p>
+          </div>
+
+          <div className="space-y-3 text-zinc-300">
             <OpeningRow day="Monday" time="Closed" />
             <OpeningRow day="Tuesday" time="11:30am–1pm / 4:30pm–8pm" />
             <OpeningRow day="Wednesday" time="11:30am–1pm / 4:30pm–8pm" />
@@ -477,21 +500,11 @@ function VisitSection() {
             <OpeningRow day="Friday" time="11am–1pm / 4pm–8pm" />
             <OpeningRow day="Saturday" time="11:30am–1pm / 4pm–8pm" />
             <OpeningRow day="Sunday" time="Closed" />
+            <p className="pt-3 text-sm leading-6 text-zinc-500">
+              Opening times can vary on bank holidays. Call before travelling if
+              you are unsure.
+            </p>
           </div>
-          <p className="mt-6 text-sm leading-6 text-zinc-500">
-            Opening times can vary on bank holidays. Call before travelling if you
-            are unsure.
-          </p>
-        </div>
-
-        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-2xl">
-          <Image
-            src="/images/stonehouses-google-hours.jpg"
-            alt="Stonehouse’s opening hours on Google Business Profile"
-            width={900}
-            height={1200}
-            className="h-full min-h-[420px] object-cover"
-          />
         </div>
       </div>
     </section>
@@ -516,11 +529,12 @@ function ContactSection() {
             Contact Stonehouse’s
           </p>
           <h2 className="mt-4 font-serif text-4xl font-black leading-tight md:text-5xl">
-            Orders, enquiries and local questions.
+            Call ahead, order for collection or ask us a question.
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">
-            For opening questions, larger orders or anything else, call the shop
-            directly. You can also message us on Facebook or email.
+            For collection orders, larger family orders, local group orders,
+            opening questions or allergy enquiries, call the shop directly. You
+            can also message us on Facebook or email.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -552,13 +566,18 @@ function ContactSection() {
 
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8">
           <ShieldCheck className="mb-4 h-8 w-8 text-[#d4b56b]" />
-          <h3 className="font-serif text-3xl font-black">Useful to include</h3>
+          <h3 className="font-serif text-3xl font-black">When contacting us</h3>
+          <p className="mt-3 leading-7 text-zinc-300">
+            A few details help us deal with orders and enquiries quicker,
+            especially at busy service times.
+          </p>
           <div className="mt-6 grid gap-3">
             {[
-              "Collection time",
-              "Approximate order size",
-              "Any allergies or dietary questions",
-              "Whether it is a larger local order",
+              "Preferred collection time",
+              "Name for the order",
+              "What you would like to order",
+              "Any allergy or dietary questions",
+              "Whether it is a larger family, school or local group order",
             ].map((item, index) => (
               <div key={item} className="flex gap-4 rounded-2xl border border-white/10 bg-black/20 p-4">
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#b89757] font-black text-black">
