@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 
-const siteUrl = "https://www.stonehousesfishandchips.co.uk";
+const siteUrl = "https://www.stonehouseschipshop.co.uk";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
