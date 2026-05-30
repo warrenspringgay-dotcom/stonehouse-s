@@ -22,17 +22,28 @@ const googleReviewUrl = "https://g.page/r/CXD-f1GqG3NPEBM/review";
 const googleMapsUrl =
   "https://www.google.com/maps/search/?api=1&query=Stonehouse%27s%20Fish%20and%20Chips%2C%201%20High%20Street%2C%20Lingdale%2C%20Saltburn%2C%20TS12%203DZ";
 
+const localAreas = [
+  "Lingdale",
+  "Boosbeck",
+  "Moorsholm",
+  "Skelton",
+  "Brotton",
+  "Loftus",
+  "Saltburn",
+  "Guisborough",
+];
+
 export const metadata: Metadata = {
-  title: "Fish and Chips Lingdale | Stonehouse’s Chip Shop",
+  title: "Fish and Chips Lingdale, Boosbeck & Skelton | Stonehouse’s",
   description:
-    "Looking for fish and chips in Lingdale? Stonehouse’s Fish & Chips is a local village chip shop at 1 High Street, Lingdale, serving freshly cooked fish, chips, sides, sauces and family favourites.",
+    "Stonehouse’s Fish & Chips is a local village chip shop in Lingdale, serving freshly cooked fish and chips for Lingdale, Boosbeck, Moorsholm, Skelton, Brotton, Loftus, Saltburn and Guisborough.",
   alternates: {
     canonical: pageUrl,
   },
   openGraph: {
-    title: "Fish and Chips Lingdale | Stonehouse’s Chip Shop",
+    title: "Fish and Chips Lingdale, Boosbeck & Skelton | Stonehouse’s",
     description:
-      "Stonehouse’s Fish & Chips on High Street, Lingdale. Freshly cooked fish and chips, family favourites, sides and sauces.",
+      "Stonehouse’s Fish & Chips on High Street, Lingdale. Freshly cooked fish and chips for Lingdale, Boosbeck, Skelton, Brotton, Loftus, Saltburn and nearby villages.",
     url: pageUrl,
     siteName: "Stonehouse’s Fish & Chips",
     images: [
@@ -78,6 +89,14 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      name: "What nearby areas does Stonehouse’s serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Stonehouse’s Fish & Chips is based in Lingdale and serves local customers from nearby areas including Boosbeck, Moorsholm, Skelton, Brotton, Loftus, Saltburn and Guisborough.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "Is Stonehouse’s open on Sunday or Monday?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -106,6 +125,29 @@ const breadcrumbSchema = {
   ],
 };
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "FastFoodRestaurant",
+  name: "Stonehouse’s Fish & Chips",
+  image: `${siteUrl}/images/stonehouses-fish-and-chips-branded.png`,
+  url: pageUrl,
+  telephone: "+441287658777",
+  servesCuisine: ["Fish and chips", "British", "Takeaway"],
+  priceRange: "£",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1 High Street",
+    addressLocality: "Lingdale",
+    addressRegion: "Saltburn",
+    postalCode: "TS12 3DZ",
+    addressCountry: "GB",
+  },
+  areaServed: localAreas.map((area) => ({
+    "@type": "Place",
+    name: area,
+  })),
+};
+
 export default function FishAndChipsLingdalePage() {
   return (
     <main className="min-h-screen bg-[#0b0d0b] text-white">
@@ -116,6 +158,10 @@ export default function FishAndChipsLingdalePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       <SiteHeader />
@@ -143,9 +189,9 @@ export default function FishAndChipsLingdalePage() {
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300 md:text-xl">
               Stonehouse’s Fish & Chips is a local village chip shop on High
-              Street in Lingdale, serving freshly cooked fish and chips, meal
-              deals, sides, sauces, chicken, kids meals and proper chip-shop
-              favourites.
+              Street in Lingdale, serving freshly cooked fish and chips for
+              Lingdale, Boosbeck, Moorsholm, Skelton, Brotton, Loftus, Saltburn,
+              Guisborough and nearby villages.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -223,6 +269,44 @@ export default function FishAndChipsLingdalePage() {
       </section>
 
       <section className="border-y border-white/10 bg-zinc-950/80 py-20">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.35em] text-[#d4b56b]">
+              <MapPin className="h-4 w-4" />
+              Local Area
+            </p>
+            <h2 className="mt-3 font-serif text-4xl font-black md:text-5xl">
+              Serving Lingdale, Boosbeck, Skelton and nearby villages
+            </h2>
+            <p className="mt-5 leading-8 text-zinc-300">
+              Stonehouse’s Fish & Chips is based on High Street in Lingdale,
+              making it a convenient village chip shop for local customers from
+              Boosbeck, Moorsholm, Skelton, Brotton, Loftus, Saltburn and
+              Guisborough. Whether you are picking up tea for the family, calling
+              in after work or travelling through the area, you can call ahead
+              and collect freshly cooked chip-shop favourites.
+            </p>
+            <p className="mt-4 leading-7 text-zinc-400">
+              We are also useful for people travelling through East Cleveland or
+              heading towards the coast from the Whitby direction, without trying
+              to pretend we are a Whitby chip shop.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {localAreas.map((area) => (
+              <div
+                key={area}
+                className="rounded-2xl border border-[#b89757]/25 bg-[#0b0d0b] px-5 py-4 text-center font-bold text-zinc-100 shadow-lg shadow-black/10"
+              >
+                {area}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="mx-auto mb-10 max-w-3xl text-center">
             <p className="text-xs font-black uppercase tracking-[0.35em] text-[#d4b56b]">
