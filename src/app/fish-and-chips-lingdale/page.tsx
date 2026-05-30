@@ -288,9 +288,8 @@ export default function FishAndChipsLingdalePage() {
             </p>
             <p className="mt-4 leading-7 text-zinc-400">
               We are also useful for people travelling through East Cleveland or
-              heading towards the coast from the Whitby direction, without trying
-              to pretend we are a Whitby chip shop.
-            </p>
+              heading towards the coast from the Whitby direction.
+              </p>
           </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
