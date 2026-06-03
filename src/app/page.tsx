@@ -21,7 +21,7 @@ import SiteFooter from "@/components/SiteFooter";
 
 const BUSINESS_NAME = "Stonehouse’s Fish & Chips";
 const SITE_URL = "https://www.stonehousesfishandchips.co.uk";
-const BUSINESS_EMAIL = "hello@stonehousesfishandchips.co.uk";
+const BUSINESS_EMAIL = "info@fishandchipsredcar.co.uk";
 const PHONE_DISPLAY = "01287 658777";
 const PHONE_HREF = "tel:+441287658777";
 const FACEBOOK_URL = "https://www.facebook.com/";
