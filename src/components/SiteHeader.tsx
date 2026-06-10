@@ -11,19 +11,19 @@ export default function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm font-bold text-zinc-300 md:flex">
-          <Link className="hover:text-white" href="#menu">
+          <Link className="hover:text-white" href="/#menu">
             Menu
           </Link>
-          <Link className="hover:text-white" href="#gallery">
+          <Link className="hover:text-white" href="/#gallery">
             Food
           </Link>
-          <Link className="hover:text-white" href="#visit">
+          <Link className="hover:text-white" href="/#visit">
             Visit
           </Link>
-          <Link className="hover:text-white" href="#contact">
+          <Link className="hover:text-white" href="/#contact">
             Contact
           </Link>
-          <Link className="hover:text-white" href="#reviews">
+          <Link className="hover:text-white" href="/#reviews">
             Reviews
           </Link>
         </nav>
