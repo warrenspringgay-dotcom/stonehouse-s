@@ -405,7 +405,7 @@ function GallerySection() {
           See what we serve
         </h2>
         <p className="mt-4 leading-7 text-zinc-300">
-          A mix of real shop photos and polished food imagery to show the range:
+          A mix of real shop food to show the range:
           fish and chips, burgers, sauces, specials and freshly cooked battered
           fish.
         </p>
