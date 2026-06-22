@@ -20,7 +20,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 const BUSINESS_NAME = "Stonehouse’s Fish & Chips";
-const SITE_URL = "https://www.stonehousesfishandchips.co.uk";
+const SITE_URL = "https://www.stonehouseschipshop.co.uk";
 const BUSINESS_EMAIL = "info@fishandchipsredcar.co.uk";
 const PHONE_DISPLAY = "01287 658777";
 const PHONE_HREF = "tel:+441287658777";
@@ -28,6 +28,7 @@ const FACEBOOK_URL = "https://www.facebook.com/";
 const GOOGLE_REVIEW_URL = "https://g.page/r/CXD-f1GqG3NPEBM/review";
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Stonehouse%27s%20Fish%20and%20Chips%2C%201%20High%20Street%2C%20Lingdale%2C%20Saltburn%2C%20TS12%203DZ";
+const PIER_VISTA_URL = "https://www.fishandchipsredcar.co.uk";
 
 const galleryImages = [
   {
@@ -201,6 +202,7 @@ export default function HomePage() {
       <GallerySection />
       <VisitSection />
       <ContactSection />
+      <SisterShopSection />
       <ReviewSection />
       <SiteFooter />
     </main>
@@ -593,6 +595,50 @@ function ContactSection() {
                 <span className="self-center font-bold">{item}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SisterShopSection() {
+  return (
+    <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
+      <div className="overflow-hidden rounded-[2rem] border border-[#b89757]/25 bg-gradient-to-br from-[#b89757]/10 via-[#0b0d0b] to-black shadow-2xl">
+        <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative min-h-[320px]">
+            <Image
+              src="/images/stonehouses-shop-front.jpg"
+              alt="Stonehouse’s Fish and Chips in Lingdale"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+          </div>
+
+          <div className="p-8 md:p-12">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-[#d4b56b]">
+              Our Sister Shop
+            </p>
+            <h2 className="mt-4 font-serif text-4xl font-black leading-tight md:text-5xl">
+              Heading to Redcar seafront?
+            </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">
+              Visit our sister shop, Pier Vista Fish &amp; Chips, directly opposite
+              the Redcar Beacon. It is a great stop for traditional fish and chips
+              after a walk along the promenade, a day at the beach or time in the
+              seafront amusements.
+            </p>
+            <a
+              href={PIER_VISTA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-[#b89757] px-6 py-3 font-black text-black transition hover:bg-[#d4b56b]"
+            >
+              Explore Pier Vista Fish &amp; Chips
+              <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </div>
