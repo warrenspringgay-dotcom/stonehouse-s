@@ -609,7 +609,7 @@ function SisterShopSection() {
         <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative min-h-[320px]">
             <Image
-              src="/images/stonehouses-shop-front.jpg"
+              src="/images/shop-front.jpg"
               alt="Stonehouse’s Fish and Chips in Lingdale"
               fill
               className="object-cover"
