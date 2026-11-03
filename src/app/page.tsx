@@ -77,24 +77,24 @@ const menuSections = [
   {
     title: "Fish & Chips",
     items: [
-      ["Small Cod & Chips", "£8.80"],
-      ["Large Cod & Chips", "£10.00"],
-      ["Large Hake & Chips", "£7.80"],
-      ["Small Cod", "£6.40"],
-      ["Large Cod", "£7.30"],
-      ["Fish Bites", "£6.10"],
-      ["Scampi Only", "£5.20"],
+      ["Small Cod & Chips", "£9.00"],
+      ["Large Cod & Chips", "£10.20"],
+      ["Large Hake & Chips", "£8.50"],
+      ["Small Cod", "£6.60"],
+      ["Large Cod", "£7.50"],
+      ["Fish Bites", "£6.30"],
+      ["Scampi Only", "£5.40"],
     ],
   },
   {
     title: "Meal Deals",
     items: [
-      ["Small Cod Meal Deal", "£11.00"],
-      ["Large Cod Meal Deal", "£12.00"],
+      ["Small Cod Meal Deal", "£11.20"],
+      ["Large Cod Meal Deal", "£12.20"],
       ["Sausage Meal Deal", "£6.00"],
       ["Kids Meal", "£4.20"],
       ["Kids Fish & Chips", "£4.70"],
-      ["Scampi, Chips & Peas", "£8.30"],
+      ["Scampi, Chips & Peas", "£8.50"],
     ],
   },
   {
@@ -497,13 +497,13 @@ function VisitSection() {
             </h2>
             <p className="mt-4 leading-7 text-zinc-300">
               Stonehouse’s opens for traditional lunch and teatime chip-shop
-              service through the week, with extended weekend hours on Friday and
-              Saturday. Closed Sunday and Monday.
+              service Tuesday to Saturday, plus Monday evenings from 4:30pm.
+              Closed Sunday.
             </p>
           </div>
 
           <div className="space-y-3 text-zinc-300">
-            <OpeningRow day="Monday" time="Closed" />
+            <OpeningRow day="Monday" time="From 4:30pm" />
             <OpeningRow day="Tuesday" time="11:30am–1pm / 4:30pm–8pm" />
             <OpeningRow day="Wednesday" time="11:30am–1pm / 4:30pm–8pm" />
             <OpeningRow day="Thursday" time="11:30am–1pm / 4:30pm–8pm" />
