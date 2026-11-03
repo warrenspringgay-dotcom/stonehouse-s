@@ -100,7 +100,7 @@ const faqSchema = {
       name: "Is Stonehouse’s open on Sunday or Monday?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Stonehouse’s is usually closed on Sunday and Monday. Opening times can vary on bank holidays, so call before travelling if unsure.",
+        text: "Stonehouse’s is open on Monday evenings from 4:30pm and closed on Sundays. Opening times can vary on bank holidays, so call before travelling if unsure.",
       },
     },
   ],
@@ -376,7 +376,7 @@ export default function FishAndChipsLingdalePage() {
               Lunch and evening service
             </h2>
             <div className="mt-6 space-y-3 text-zinc-300">
-              <OpeningRow day="Monday" time="Closed" />
+              <OpeningRow day="Monday" time="From 4:30pm" />
               <OpeningRow day="Tuesday" time="11:30am–1pm / 4:30pm–8pm" />
               <OpeningRow day="Wednesday" time="11:30am–1pm / 4:30pm–8pm" />
               <OpeningRow day="Thursday" time="11:30am–1pm / 4:30pm–8pm" />
