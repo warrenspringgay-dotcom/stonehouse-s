@@ -83,7 +83,7 @@ const menuSections = [
       ["Small Cod", "£6.60"],
       ["Large Cod", "£7.50"],
       ["Fish Bites", "£6.30"],
-      ["Scampi Only", "£5.40"],
+      ["Scampi Only", "£5.20"],
     ],
   },
   {
@@ -94,7 +94,7 @@ const menuSections = [
       ["Sausage Meal Deal", "£6.00"],
       ["Kids Meal", "£4.20"],
       ["Kids Fish & Chips", "£4.70"],
-      ["Scampi, Chips & Peas", "£8.50"],
+      ["Scampi, Chips & Peas", "£8.30"],
     ],
   },
   {
